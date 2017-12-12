@@ -6,7 +6,7 @@ mkdir -p $BUILD_DIR
 
 pushd $BUILD_DIR
 ../../deps/binutils-$BINUTILS_VER/configure \
-    --prefix=$BUILD_DIR/../out \
+    --prefix=/data/local \
     --target=aarch64-linux-android \
     --disable-multilib
 

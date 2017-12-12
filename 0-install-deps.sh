@@ -12,6 +12,7 @@ download() {
 
 decomp() {
     for f in *.tar*; do
+        echo "Extracting: $file"
         tar xf $f
     done
 }
