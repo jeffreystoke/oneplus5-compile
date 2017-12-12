@@ -1,0 +1,10 @@
+# unexport versions
+unset \
+    GCC_VER BINUTILS_VER GLIBC_VER \
+    MPFR_VER GMP_VER MPC_VER ISL_VER CLOOG_VER
+
+# unexport urls
+unset \
+    GCC_URL BINUTILS_URL GLIBC_URL \
+    MPFR_URL GMP_URL MPC_URL ISL_URL CLOOG_URL \
+    SOURCE_URLS
