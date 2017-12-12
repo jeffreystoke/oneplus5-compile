@@ -6,8 +6,12 @@ SCRIPTS="\
 6-build-std-libc.sh 7-build-std-libc++.sh
 "
 
+source ./env.sh
+
 for s in $SCRIPTS; 
 do
     chmod +x $s
     ./$s
 done
+
+source ./unsetenv.sh
