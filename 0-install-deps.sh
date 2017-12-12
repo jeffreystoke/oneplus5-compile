@@ -4,6 +4,7 @@ download() {
     for f in $SOURCE_URLS; do
         file=$(basename $f)
         if [ ! -f $file ]; then
+            echo "Start downloading: $file"
             curl -fSL $f -o $file
         fi
     done
@@ -25,7 +26,7 @@ prepare() {
         if [ -d ../$dir ]; then
             ln -s ../$dir ${file%-*.tar*}
         else
-            echo "dependencies not satisfied, run `download` and `decomp`"
+            echo "dependencies not satisfied, run `./0-install-deps.sh`"
             exit 1
         fi
     done
