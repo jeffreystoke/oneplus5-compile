@@ -1,11 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 
 download() {
-    mkdir -p deps
     for f in $SOURCE_URLS; do
         file=$(basename $f)
         if [ ! -f $file ]; then
-            curl -fsSL $f -o $file
+            curl -fSL $f -o $file
         fi
     done
 }

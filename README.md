@@ -10,10 +10,6 @@ Init kernel with git dir
 $ git submodule update --init
 ```
 
-```bash
-
-```
-
 ## References
 
 [GNU GCC #AArch64-Options](https://gcc.gnu.org/onlinedocs/gcc-7.2.0/gcc/AArch64-Options.html#AArch64-Options)

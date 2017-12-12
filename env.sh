@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 GNU_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/gnu
 KERNEL_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/kernel

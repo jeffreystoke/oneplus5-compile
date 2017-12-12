@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SCRIPTS="\
 0-install-deps.sh 1-build-binutils.sh 2-build-gcc.sh \
