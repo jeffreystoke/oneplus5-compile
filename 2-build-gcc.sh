@@ -8,12 +8,10 @@ pushd $BUILD_DIR
     --prefix=/data/local \
     --target=aarch64-linux-android \
     --enable-languages=c,c++ \
-    --enable-clocale=gnu \
-    --enable-libstdcxx-time=yes \
-    --enable-libgomp \
+    --disable-libgomp \
     --enable-plugin \
-    --enable-threads=posix \
-    --enable-shared \
+    --enable-threads \
+    --disable-nls \
     --enable-cloog-backend=isl \
     --enable-gold \
     --enable-gnu-indirect-function \
