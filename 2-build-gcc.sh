@@ -6,12 +6,12 @@ mkdir -p $BUILD_DIR
 pushd $BUILD_DIR
 ../../deps/gcc-$GCC_VER/configure \
     --prefix=/data/local \
-    --with-sysroot=/data/local \
-    --target=aarch64-linux-android \
-    --program-transform-name='s&^&aarch64-linux-android-&' \
+    --target=aarch64-linux \
     --enable-languages=c,c++ \
     --disable-multilib \
     --enable-gold
+    # --with-sysroot=/data/local \
+    # --program-transform-name='s&^&aarch64-linux-android-&' \
     # --libdir=/data/local/lib \
     # --enable-plugins \
     # --enable-libgomp \
