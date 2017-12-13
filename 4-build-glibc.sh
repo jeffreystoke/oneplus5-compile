@@ -5,8 +5,8 @@ BUILD_DIR=`pwd`/build/glibc
 mkdir -p $BUILD_DIR
 pushd $BUILD_DIR
 ../../deps/glibc/configure \
-    --prefix=/data/local/linux \
-    --with-headers=/data/local/linux/include \
+    --prefix=/data/local/aarch64-linux-android/ \
+    --with-headers=/data/local/aarch64-linux-android/include \
     --build=$MACHTYPE \
     --host=aarch64-linux-android \
     --target=aarch64-linux-android \
