@@ -8,27 +8,21 @@ pushd $BUILD_DIR
     --prefix=/data/local \
     --target=aarch64-linux-android \
     --enable-languages=c,c++ \
+    --with-sysroot=/data \
+    --enable-clocale=gnu \
+    --enable-libstdcxx-time=yes \
+    --enable-libgomp \
+    --enable-plugin \
+    --enable-threads=posix \
+    --enable-shared \
+    --enable-cloog-backend=isl \
+    --enable-gold \
+    --enable-gnu-indirect-function \
+    --enable-graphite=yes \
+    --enable-initfini-array \
+    --enable-eh-frame-hdr-for-static \
     --disable-multilib
 
 make -j$(getconf _NPROCESSORS_ONLN) all-gcc
 make install-gcc
 popd
-
-# --with-sysroot=/data/local \
-    # --program-transform-name='s&^&aarch64-linux-android-android-&' \
-    # --libdir=/data/local/lib \
-    # --enable-plugins \
-    # --enable-libgomp \
-    # --enable-gnu-indirect-function \
-    # --enable-ld=default \
-    # --enable-threads=posix \
-    # --enable-eh-frame-hdr-for-static \
-    # --enable-graphite=yes \
-    # --enable-libstdcxx-time=yes \
-    # --enable-clocale=gnu \
-    # --enable-libmpx \
-    # --enable-shared \
-    # --enable-nls \
-    # --enable-cloog-backend=isl \
-    # --enable-initfini-array \
-    # --enable-gold
