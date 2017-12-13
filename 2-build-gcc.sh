@@ -7,12 +7,12 @@ pushd $BUILD_DIR
 ../../deps/gcc-$GCC_VER/configure \
     --prefix=/data/local \
     --with-sysroot=/data/local \
-    --libdir=/data/local/lib \
     --target=aarch64-linux-android \
     --program-transform-name='s&^&aarch64-linux-android-&' \
     --enable-languages=c,c++ \
     --disable-multilib \
     --enable-gold
+    # --libdir=/data/local/lib \
     # --enable-plugins \
     # --enable-libgomp \
     # --enable-gnu-indirect-function \
