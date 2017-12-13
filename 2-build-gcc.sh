@@ -6,7 +6,7 @@ mkdir -p $BUILD_DIR
 pushd $BUILD_DIR
 ../../deps/gcc/configure \
     --prefix=/data/local \
-    --target=aarch64-linux \
+    --target=aarch64-linux-android \
     --enable-languages=c,c++ \
     --disable-multilib
 
@@ -15,7 +15,7 @@ make install-gcc
 popd
 
 # --with-sysroot=/data/local \
-    # --program-transform-name='s&^&aarch64-linux-android-&' \
+    # --program-transform-name='s&^&aarch64-linux-android-android-&' \
     # --libdir=/data/local/lib \
     # --enable-plugins \
     # --enable-libgomp \

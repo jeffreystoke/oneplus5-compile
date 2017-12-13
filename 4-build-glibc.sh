@@ -8,8 +8,8 @@ pushd $BUILD_DIR
     --prefix=/data/local/linux \
     --with-headers=/data/local/linux/include \
     --build=$MACHTYPE \
-    --host=aarch64-linux \
-    --target=aarch64-linux \
+    --host=aarch64-linux-android \
+    --target=aarch64-linux-android \
     --disable-multilib \
     libc_cv_forced_unwind=yes
 
@@ -19,7 +19,7 @@ make -j$(getconf _NPROCESSORS_ONLN) csu/subdir_lib
 
 install csu/crt1.o csu/crti.o csu/crtn.o /data/local/linux/lib
 
-aarch64-linux-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /data/local/linux/lib/libc.so
+aarch64-linux-android-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /data/local/linux/lib/libc.so
 
 touch /data/local/include/stubs.h
 
