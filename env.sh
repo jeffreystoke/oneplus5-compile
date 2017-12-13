@@ -26,4 +26,4 @@ export CLOOG_URL=$GCC_MIRROR/gcc/infrastructure/cloog-$CLOOG_VER.tar.gz
 export SOURCE_URLS="$GCC_URL $BINUTILS_URL $GLIBC_URL \
 $MPFR_URL $GMP_URL $MPC_URL $ISL_URL $CLOOG_URL"
 
-export PATH=$PATH:`pwd`/build/out/bin
+export PATH=$PATH:/data/local/bin
