@@ -17,7 +17,7 @@ make install-bootstrap-headers=yes install-headers
 
 make -j$(getconf _NPROCESSORS_ONLN) csu/subdir_lib
 
-install csu/crt1.o csu/crti.o csu/crtn.o /data/local/lib
+install csu/crt1.o csu/crti.o csu/crtn.o /data/local/aarch64-linux-android/lib
 
 aarch64-linux-android-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /data/local/aarch64-linux-android/lib/libc.so
 
