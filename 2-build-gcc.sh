@@ -8,7 +8,6 @@ pushd $BUILD_DIR
     --prefix=/data/local \
     --target=aarch64-linux-android \
     --enable-languages=c,c++ \
-    --with-sysroot=/data \
     --enable-clocale=gnu \
     --enable-libstdcxx-time=yes \
     --enable-libgomp \

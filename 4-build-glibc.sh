@@ -21,6 +21,6 @@ install csu/crt1.o csu/crti.o csu/crtn.o /data/local/aarch64-linux-android/lib
 
 aarch64-linux-android-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /data/local/aarch64-linux-android/lib/libc.so
 
-touch /data/local/include/stubs.h
+touch /data/local/include/gnu/stubs.h
 
 popd
