@@ -8,9 +8,13 @@ pushd $BUILD_DIR
     --prefix=/data/local \
     --target=aarch64-linux \
     --enable-languages=c,c++ \
-    --disable-multilib \
-    --enable-gold
-    # --with-sysroot=/data/local \
+    --disable-multilib
+
+make -j$(getconf _NPROCESSORS_ONLN) all-gcc
+make install-gcc
+popd
+
+# --with-sysroot=/data/local \
     # --program-transform-name='s&^&aarch64-linux-android-&' \
     # --libdir=/data/local/lib \
     # --enable-plugins \
@@ -27,7 +31,4 @@ pushd $BUILD_DIR
     # --enable-nls \
     # --enable-cloog-backend=isl \
     # --enable-initfini-array \
-
-make -j$(getconf _NPROCESSORS_ONLN) all-gcc
-make install-gcc
-popd
+    # --enable-gold
