@@ -4,7 +4,7 @@ BUILD_DIR=`pwd`/build/gcc
 
 mkdir -p $BUILD_DIR
 pushd $BUILD_DIR
-../../deps/gcc-$GCC_VER/configure \
+../../deps/gcc/configure \
     --prefix=/data/local \
     --target=aarch64-linux \
     --enable-languages=c,c++ \

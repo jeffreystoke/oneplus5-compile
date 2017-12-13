@@ -4,7 +4,7 @@ BUILD_DIR=`pwd`/build/glibc
 
 mkdir -p $BUILD_DIR
 pushd $BUILD_DIR
-../../deps/glibc-$GLIBC_VER/configure \
+../../deps/glibc/configure \
     --prefix=/data/local/linux \
     --with-headers=/data/local/linux/include \
     --build=$MACHTYPE \

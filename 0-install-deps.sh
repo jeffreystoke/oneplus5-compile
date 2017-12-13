@@ -12,20 +12,21 @@ download() {
 
 decomp() {
     for f in *.tar*; do
-        echo "Extracting: $file"
-        tar xf $f
+        if [ ! -d ${f%-*} ]; then
+            echo "Extracting: $f"
+            tar xf $f
+            mv ${f%.tar*} ${f%-*}
+        fi
     done
 }
 
 prepare() {
-    GCC_DIR=$(basename $GCC_URL)
-    GCC_DIR=${GCC_DIR%.tar*}
-    pushd $GCC_DIR
+    pushd gcc
     for f in $MPFR_URL $GMP_URL $MPC_URL $ISL_URL $CLOOG_URL; do
         file=$(basename $f)
-        dir=${file%.tar*}
+        dir=${file%-*}
         if [ -d ../$dir ]; then
-            ln -s ../$dir ${file%-*.tar*}
+            ln -s ../$dir $dir
         else
             echo "dependencies not satisfied, run `./0-install-deps.sh`"
             exit 1
@@ -37,7 +38,7 @@ prepare() {
 clean_dir() {
     for f in $SOURCE_URLS; do
         file=$(basename $f)
-        dir=$file%.tar*
+        dir=${file%.tar*}
         if [ -d $dir ]; then
             rm -rf $dir
         fi

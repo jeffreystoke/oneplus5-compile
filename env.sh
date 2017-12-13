@@ -4,14 +4,14 @@ GNU_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/gnu
 KERNEL_MIRROR=https://mirrors.tuna.tsinghua.edu.cn/kernel
 GCC_MIRROR=ftp://gcc.gnu.org/pub
 
-export GCC_VER=7.2.0
-export BINUTILS_VER=2.29
-export GLIBC_VER=2.26
-export MPFR_VER=3.1.6
-export GMP_VER=6.1.2
-export MPC_VER=1.0.3
-export ISL_VER=0.18
-export CLOOG_VER=0.18.1
+GCC_VER=7.2.0
+BINUTILS_VER=2.29
+GLIBC_VER=2.26
+MPFR_VER=3.1.6
+GMP_VER=6.1.2
+MPC_VER=1.0.3
+ISL_VER=0.18
+CLOOG_VER=0.18.1
 
 export GCC_URL=$GNU_MIRROR/gcc/gcc-$GCC_VER/gcc-$GCC_VER.tar.gz
 export BINUTILS_URL=$GNU_MIRROR/binutils/binutils-$BINUTILS_VER.tar.gz
