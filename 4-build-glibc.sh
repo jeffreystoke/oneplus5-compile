@@ -19,7 +19,7 @@ make -j$(getconf _NPROCESSORS_ONLN) csu/subdir_lib
 
 install csu/crt1.o csu/crti.o csu/crtn.o /data/local/aarch64-linux-android/lib
 
-aarch64-linux-android-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /data/local/aarch64-linux-android/lib/libc.so
+/data/local/bin/aarch64-linux-android-gcc -nostdlib -nostartfiles -shared -x c /dev/null -o /data/local/aarch64-linux-android/lib/libc.so
 
 touch /data/local/aarch64-linux-android/include/gnu/stubs.h
 
